@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Poonam Badode | Portfolio</title>
+<style>
+  :root {
+    --bg: #f7f5fb;
+    --text: #1d1a2b;
+    --muted: #5f5a75;
+    --accent: #5b3fd1;
+    --accent-text: #ffffff;
+    --surface: #ffffff;
+    --line: #ddd8ee;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #14111f;
+      --text: #eeeaf8;
+      --muted: #a9a3c4;
+      --accent: #9d86ff;
+      --accent-text: #14111f;
+      --surface: #1e1a30;
+      --line: #342f4d;
+    }
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: Georgia, "Times New Roman", serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+  }
+  a { color: var(--accent); }
+  a:focus-visible, button:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+  header {
+    position: sticky; top: 0; z-index: 5;
+    background: var(--bg);
+    border-bottom: 1px solid var(--line);
+  }
+  nav {
+    max-width: 860px; margin: 0 auto; padding: 14px 20px;
+    display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap;
+  }
+  nav strong { font-size: 1.05rem; }
+  nav ul { list-style: none; display: flex; gap: 18px; flex-wrap: wrap; }
+  nav a { text-decoration: none; color: var(--text); font-family: system-ui, sans-serif; font-size: .95rem; }
+  nav a:hover { color: var(--accent); }
+  main { max-width: 860px; margin: 0 auto; padding: 0 20px; }
+  section { padding: 56px 0 8px; }
+  h1 { font-size: clamp(2.2rem, 7vw, 3.6rem); line-height: 1.15; margin-bottom: 14px; }
+  h2 { font-size: 1.6rem; margin-bottom: 18px; border-bottom: 2px solid var(--accent); display: inline-block; padding-bottom: 4px; }
+  p { max-width: 62ch; color: var(--muted); }
+  .hero p { font-size: 1.15rem; margin-bottom: 22px; }
+  .btn {
+    display: inline-block; padding: 11px 22px; border-radius: 6px;
+    background: var(--accent); color: var(--accent-text);
+    text-decoration: none; font-family: system-ui, sans-serif; font-weight: 600; margin-right: 10px;
+  }
+  .btn.alt { background: transparent; color: var(--accent); border: 2px solid var(--accent); }
+  .skills { display: flex; flex-wrap: wrap; gap: 10px; list-style: none; }
+  .skills li {
+    font-family: system-ui, sans-serif; font-size: .9rem;
+    padding: 6px 14px; border: 1px solid var(--line); border-radius: 999px; background: var(--surface); color: var(--text);
+  }
+  .projects { display: grid; gap: 18px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+  .project { background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 20px; }
+  .project h3 { font-size: 1.1rem; margin-bottom: 6px; }
+  .project p { font-size: .95rem; margin-bottom: 10px; }
+  .project a { font-family: system-ui, sans-serif; font-size: .9rem; }
+  footer { max-width: 860px; margin: 56px auto 0; padding: 22px 20px 40px; border-top: 1px solid var(--line); color: var(--muted); font-family: system-ui, sans-serif; font-size: .9rem; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+</style>
+</head>
+<body>
+
+<header>
+  <nav aria-label="Main">
+    <strong>Poonam Badode</strong>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <section class="hero" id="home">
+    <h1>Hi, I’m Poonam Badode.</h1>
+    <p>I’m a [your role, e.g. web developer / student / designer] who builds [what you build]. Here is my work and how to reach me.</p>
+    <a class="btn" href="#projects">View my projects</a>
+    <a class="btn alt" href="#contact">Contact me</a>
+  </section>
+
+  <section id="about">
+    <h2>About me</h2>
+    <p>Write 3–4 lines here: who you are, what you study or do, and what you want to work on next. Replace this text with your own.</p>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <ul class="skills">
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>JavaScript</li>
+      <li>Git and GitHub</li>
+      <li>[Add your skill]</li>
+    </ul>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="projects">
+      <article class="project">
+        <h3>Project one</h3>
+        <p>One line on what it does and what you used to build it.</p>
+        <a href="#">View on GitHub</a>
+      </article>
+      <article class="project">
+        <h3>Project two</h3>
+        <p>One line on what it does and what you used to build it.</p>
+        <a href="#">View on GitHub</a>
+      </article>
+      <article class="project">
+        <h3>Project three</h3>
+        <p>One line on what it does and what you used to build it.</p>
+        <a href="#">View on GitHub</a>
+      </article>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Want to work together or just say hello? Email me at <a href="mailto:you@example.com">you@example.com</a>.</p>
+  </section>
+</main>
+
+<footer>
+  © 2026 Poonam Badode
+</footer>
+
+</body>
+</html>
